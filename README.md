@@ -1,3 +1,111 @@
+# User API Specification
+
+## Create User
+Endpoint : POST /api/users
+
+Request Body :
+
+```json
+{
+  "nama" : "lala",
+  "usia" : 16
+}
+```
+
+Response Body (success) :
+
+```json
+{
+  "data": {
+    "id" : "random string",
+    "nama": "lala",
+    "usia": 16
+  }
+}
+```
+
+Response Body (failed) :
+
+```json
+{
+  "error": "Invalid input data"
+}
+```
+
+## Update User
+Endpoint : PUT /api/users/{id}
+
+Request Body :
+
+```json
+{
+  "nama" : "haechan Update",
+  "usia" : 18
+}
+```
+
+Response Body (success) :
+
+```json
+{
+  "data": {
+    "id" : "random string",
+    "nama": "haechan Update",
+    "usia": 18
+  }
+}
+```
+
+Response Body (failed) :
+
+```json
+{
+  "error": "User not found"
+}
+```
+
+## Get User
+Endpoint : GET /api/users
+
+Response Body (success) :
+
+```json
+{
+  "data": {
+    "id" : "random string",
+    "nama": "haechan",
+    "usia": 18
+  }
+}
+```
+
+Response Body (failed) :
+
+```json
+{
+  "error": "User not found"
+}
+```
+
+## Delete User
+Endpoint : DELETE /api/users/{id}
+
+Response Body (success) :
+
+```json
+{
+  "message": "User deleted successfully"
+}
+```
+
+Response Body (failed) :
+
+```json
+{
+  "error": "User not found"
+}
+```
+
 #<img width="1916" height="941" alt="image" src="https://github.com/user-attachments/assets/ff4346f8-4ba7-41e4-bde2-2761d36222ff" />#
 #<img width="1919" height="966" alt="image" src="https://github.com/user-attachments/assets/544a5230-5df5-4cf5-b1c9-d227cba28c8f" />#
 #<img width="1916" height="951" alt="image" src="https://github.com/user-attachments/assets/9bb84e40-9667-4882-9ed9-3673db25341f" />#
